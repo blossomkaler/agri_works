@@ -1,34 +1,3 @@
-.container{
-    animation: mainBg 15s reverse infinite;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 42vw;
-}
-
-
-
-@keyframes mainBg {
-    0%{
-        background-image: url(../assests/landing-page/desktop/1.png);
-    }
-    25%{
-        background-image: url(../assests/landing-page/desktop/2.png);
-    }
-    50%{
-        background-image: url(../assests/landing-page/desktop/3.png);
-    }
-    75%{
-        background-image: url(../assests/landing-page/desktop/2.png);
-    }
-
-    100%{
-        background-image: url(../assests/landing-page/desktop/1.png);
-    }
-    
-}
- 
 
 /*````````````````````ABOUT US```````````````````````*/
 .about-us{
@@ -345,31 +314,6 @@
 }
 
 @media only screen and (max-width: 600px){
-    .container{
-        animation: mobileBg 15s reverse infinite;
-        height: 68.5vw;
-    }
-    
-    
-    @keyframes mobileBg {
-        0%{
-            background-image: url(../assests/landing-page/mobile/1.png);
-        }
-        25%{
-            background-image: url(../assests/landing-page/mobile/2.png);
-        }
-        50%{
-            background-image: url(../assests/landing-page/mobile/3.png);
-        }
-        75%{
-            background-image: url(../assests/landing-page/mobile/2.png);
-        }
-    
-        100%{
-            background-image: url(../assests/landing-page/mobile/1.png);
-        }
-        
-    }
     .youtube{
         font-size: 1.3rem;
         line-height: 1.7rem;

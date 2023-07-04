@@ -4,6 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Sukhdev Mullanpur</title>
+    <style>
+
+        .container{
+            animation: mainBg 15s reverse infinite;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 42vw;
+        }
+
+        @keyframes mainBg {
+            0%{
+                background-image: url(../assests/landing-page/1-pc.webp);
+            }
+            25%{
+                background-image: url(../assests/landing-page/2-pc.webp);
+            }
+            50%{
+                background-image: url(../assests/landing-page/3-pc.webp);
+            }
+            75%{
+                background-image: url(../assests/landing-page/2-pc.webp);
+            }
+
+            100%{
+                background-image: url(../assests/landing-page/1-pc.webp);
+            }
+            
+        }
+ 
+
+            
+        @media only screen and (max-width: 600px){
+        .container{
+            animation: mobileBg 15s reverse infinite;
+            height: 68.5vw;
+        }
+        
+        @keyframes mobileBg {
+            0%{
+                background-image: url(../assests/landing-page/1-mob.webp);
+            }
+            25%{
+                background-image: url(../assests/landing-page/2-mob.webp);
+            }
+            50%{
+                background-image: url(../assests/landing-page/3-mob.webp);
+            }
+            75%{
+                background-image: url(../assests/landing-page/2-mob.webp);
+            }
+        
+            100%{
+                background-image: url(../assests/landing-page/1-mob.webp);
+            }
+            
+        }}
+    </style>
+
     <link rel="stylesheet" href="css/headerFooter.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" type="image/x-icon" href="assests/company/favicon.ico">

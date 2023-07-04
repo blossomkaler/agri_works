@@ -289,6 +289,7 @@ footer .heading{
         text-align: center;
         font-size: 1rem;
         line-height: 3.1rem;
+        padding-inline: 0.7rem;
     }
 
     .company-name img {

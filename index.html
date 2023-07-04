@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width">
     <title>Sukhdev Mullanpur</title>
     <style>
-
         .container{
             animation: mainBg 15s reverse infinite;
             background-repeat: no-repeat;
@@ -17,26 +16,28 @@
 
         @keyframes mainBg {
             0%{
-                background-image: url(../assests/landing-page/1-pc.webp);
+                background-image: url(assests/landing-page/1-pc.webp);
             }
             25%{
-                background-image: url(../assests/landing-page/2-pc.webp);
+                background-image: url(assests/landing-page/2-pc.webp);
             }
             50%{
-                background-image: url(../assests/landing-page/3-pc.webp);
+                background-image: url(assests/landing-page/3-pc.webp);
             }
             75%{
-                background-image: url(../assests/landing-page/2-pc.webp);
+                background-image: url(assests/landing-page/2-pc.webp);
             }
 
             100%{
-                background-image: url(../assests/landing-page/1-pc.webp);
+                background-image: url(assests/landing-page/1-pc.webp);
             }
             
         }
+      
+        .about-us .heading{
+            background-image: url(assests/images/img1.webp);
+        }
  
-
-            
         @media only screen and (max-width: 600px){
         .container{
             animation: mobileBg 15s reverse infinite;
@@ -45,20 +46,20 @@
         
         @keyframes mobileBg {
             0%{
-                background-image: url(../assests/landing-page/1-mob.webp);
+                background-image: url(assests/landing-page/1-mob.webp);
             }
             25%{
-                background-image: url(../assests/landing-page/2-mob.webp);
+                background-image: url(assests/landing-page/2-mob.webp);
             }
             50%{
-                background-image: url(../assests/landing-page/3-mob.webp);
+                background-image: url(assests/landing-page/3-mob.webp);
             }
             75%{
-                background-image: url(../assests/landing-page/2-mob.webp);
+                background-image: url(assests/landing-page/2-mob.webp);
             }
         
             100%{
-                background-image: url(../assests/landing-page/1-mob.webp);
+                background-image: url(assests/landing-page/1-mob.webp);
             }
             
         }}
@@ -176,8 +177,8 @@
     
     <div class="visit-us">
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3425.6283014924593!2d75.65768657528331!3d30.841079674532164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a7f7166a6681f%3A0x578c4592a520aa76!2sSukhdev%20Agricultural%20Works%20Mullanpur!5e0!3m2!1sen!2sin!4v1687250428430!5m2!1sen!2sin" 
-            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3425.6283014924593!2d75.65768657528331!3d30.841079674532164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a7f7166a6681f%3A0x578c4592a520aa76!2sSukhdev%20Agricultural%20Works%20Mullanpur!5e0!3m2!1sen!2sin!4v1687250428430!5m2!1sen!2sin"
+            title="location" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
         <div class="visit-address">
@@ -205,7 +206,7 @@
         </div>
 
         <ul class="contact-details">
-            <div class="heading">Contact us</div>
+            <li><div class="heading">Contact us</div></li>
             <li class="number"> <i class="fa-solid fa-phone"></i>
                 9814884052 / 9417284052 
             </li>
@@ -224,7 +225,7 @@
         </ul>
 
         <ul class="product-links">
-            <div class="heading">Our Products</div>
+            <li> <div class="heading">Our Products</div></li>
             <li> <a href="html/products html/planter-special.html" >Potato Planter-Special Edition</a> </li>
             <li> <a href="html/products html/tyre-model.html" >Potato Planter-Tyre Model</a> </li>
             <li> <a href="html/products html/potato-planter.html" >Potato Planter-Base Model</a> </li>
@@ -234,6 +235,5 @@
     </footer>
 
     <script src="js/headerFooter.js"></script>
-    <script src="js/index.js"></script>
 </body>
 </html>

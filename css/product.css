@@ -12,7 +12,7 @@ nav{
     background-position: center;
     background-size: cover;
 
-    animation: imgBg 15s linear infinite;
+    animation: imgBg 10s linear infinite;
 
     display: flex;
     flex-direction: column;

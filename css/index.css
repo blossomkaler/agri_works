@@ -1,3 +1,21 @@
+nav{
+    width: 100vw;
+}
+
+.nav-wrap{
+    background-image: url('../assests/landing-page/1-pc.webp');
+}  
+  
+  
+  .container {
+    width: 100vw;
+    height: auto;
+  }
+
+  #movingImage{
+    width: 100%;
+  }
+
 
 /*````````````````````ABOUT US```````````````````````*/
 .about-us{

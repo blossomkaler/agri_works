@@ -151,8 +151,7 @@ nav{
 .lightbox img{
     height: 70vh;
     background-color: white;
-    border-radius: 1rem;
-    border: 2px solid white;
+    border: 1px solid white;
     position: relative;
 }
 
@@ -191,7 +190,7 @@ nav{
     } 
 
     .lightbox img{
-        width: 80vw;
+        width: 95vw;
         height: auto;
     }
 

@@ -56,8 +56,11 @@
 }
 
 @media only screen and (max-width: 900px){
+    .items{
+        gap:3rem;
+    }
     .item{
-        height: 10rem;
+        height: 11rem;
         width: 15rem;
         background-color: #ffca89;
         margin-block: 2rem;

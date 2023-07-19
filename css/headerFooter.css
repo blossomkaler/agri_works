@@ -249,18 +249,17 @@ footer .heading{
     }
 
     .dropdown{
-        font-size: 0.7rem;
-        width: 6rem;
-        margin-top: 0.3rem;
+        font-size: 0.8rem;
+        width: 8rem;
+        margin-top: 0.3rem; 
+        display: block;
+        position: static;
+        background-color: rgba(242, 245, 246, 0.1);
+        margin: 0.5rem 0 0 0.5rem;
     }
 
     .dropdown li{
-        padding: 0.4rem;
-    }
-
-    .navigation li:hover ul.dropdown{
-        position: static;
-        background-color: rgba(242, 245, 246, 0.1);
+        padding: 0.6rem;
     }
 
     .cross{

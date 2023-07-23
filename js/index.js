@@ -11,22 +11,25 @@ const mobFrames = [
     '../assests/landing-page/3-mob.webp'
   ];
 
-
-
-const animationInterval = 1500; // Time in milliseconds between frames
+const animationInterval = 1000; // Time in milliseconds between frames
 let currentFrameIndex = 0;
 
+if(window.innerWidth < 700) animatemob();
+else animatepc();
 
-function animate() {
+
+function animatepc() {
     if (currentFrameIndex == pcFrames.length) currentFrameIndex = 0;
-
-    if(window.innerWidth < 600) image.src = mobFrames[currentFrameIndex];
-    else image.src = pcFrames[currentFrameIndex];
-  
+    image.src = pcFrames[currentFrameIndex];
     currentFrameIndex++;
-    setTimeout(animate, animationInterval);
+    setTimeout(animatepc, animationInterval);
 }
 
-animate();
+function animatemob() {
+    if (currentFrameIndex == pcFrames.length) currentFrameIndex = 0;
+    image.src = mobFrames[currentFrameIndex];
+    currentFrameIndex++;
+    setTimeout(animatemob, animationInterval);
+}
 
 

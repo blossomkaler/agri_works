@@ -1,14 +1,13 @@
-nav{
+/* nav{
     width: 100vw;
-}
+} */
 
 .nav-wrap{
     background-image: url('../assests/landing-page/1-pc.webp');
 }  
   
-  
   .container {
-    width: 100vw;
+    width: 100%;
     height: auto;
   }
 
@@ -16,14 +15,46 @@ nav{
     width: 100%;
   }
 
-
 /*````````````````````ABOUT US```````````````````````*/
+
+.abt-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .circle {
+    border-radius: 50%;
+    background-color: rgb(225, 222, 222);
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    opacity: 0;
+    animation: scaleIn 4s infinite cubic-bezier(.36, .11, .19, .32);
+    z-index: -10;
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scale(.5, .5);
+      opacity: .5;
+    }
+    to {
+      transform: scale(2.5, 2.5);
+      opacity: 0;
+    }
+  }
+
+
 .about-us{
     display: flex;
     justify-content: center;
     align-items: center;
     padding-block: 6rem;
     gap: 3vw;
+    overflow: hidden;
+
     
 }
 
@@ -37,7 +68,7 @@ nav{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
+    z-index: -8;
 }
 
 .about-us .heading div{
@@ -57,12 +88,13 @@ nav{
     line-height: 2rem;
 }
 
+
 /*````````````````````PRODUCTS`````````````````````````*/
 .works{
     padding-block: 3rem 5rem;
     padding-inline: 2rem;
-    background: linear-gradient(90deg, rgba(246,240,209,1), rgb(246, 211, 167), rgb(255, 255, 255), rgba(246,240,209,1));
-    animation: worksBg 3s linear infinite ;
+    background: linear-gradient(90deg, rgba(246,240,209,1), rgb(255, 255, 255), rgba(246,240,209,1));
+    animation: worksBg 4s linear infinite ;
     background-size: 200%;
 }
 
@@ -78,11 +110,13 @@ nav{
 
 .works .heading{
     text-align: center;
-    font-size: 3.2rem;
-    font-weight: 800;
+    font-size: 4rem;
+    font-weight: 900;
     padding-bottom: 1.5rem;
-    color: rgb(113, 70, 5);
+    color: var(--logo-clr);
+    font-family: var(--second-font);
 }
+
 
 .products{
     display: grid;
@@ -100,9 +134,13 @@ nav{
     background-color: white;
     text-decoration: none;
     color: black;
-/*     border-radius: 2rem 0 2rem 0;*/
-    box-shadow: 0.3em 0.3em .3em  rgba(0, 0, 0, 0.1), -0.3em 0 .4em rgba(0, 0, 0, 0.1);
 }
+
+.product{
+    box-shadow:0.3em 0.3em 0.3em rgba(0, 0, 0, 0.1), -0.3em 0 0.4em rgba(0, 0, 0, 0.1);
+
+}
+
 
 .product:hover .prod-img img{
     transition-duration: 1s;
@@ -145,13 +183,35 @@ nav{
 
 .visit-us .map{
     width: 40%;
+    transform: translateY(0);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+
+.map.show{
+    transform: translateX(0); 
 }
 
 .visit-us .heading{
     font-size: 3rem;
     font-weight: 800;
     padding-bottom: 1rem;
+    animation: colorBlink 0.7s infinite linear;
+    color: black;
 }
+
+@keyframes colorBlink {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0.3;
+    }
+
+    
+}
+
+
 
 .visit-us .address{
     line-height: 2.5rem;
@@ -264,6 +324,11 @@ nav{
         height: 12rem;
         width: 12rem;
         font-size: 1.7rem;
+    }
+
+    .circle {
+        width: 10rem;
+        height: 10rem;
     }
 
     .about-us .heading div{

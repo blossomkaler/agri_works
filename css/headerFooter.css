@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500;800&family=Merriweather:wght@300;400;700;900&display=swap');
 
  :root{
     --main-font :'Merriweather', serif;
+    --second-font: 'Merriweather Sans', sans-serif;
     --logo-clr: #f27d00;
  }
 
@@ -16,6 +17,22 @@ body{
     font-size: 1.5rem;
 }
 
+
+.hidden{
+    opacity: 0;
+    transform: translateY(100%);
+    filter: blur(5px);
+    transition: all 1.5s;
+    overflow-x: hidden;
+    z-index: -100;
+  }
+  .show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+    z-index: 100;
+  }
+
 /*``````````````````````NAVBAR```````````````````````````*/
 
 nav{
@@ -28,7 +45,7 @@ nav{
     color: white;
     font-weight: 300;
     padding-block: 1rem;
-    z-index: 2000;
+    z-index: 200000;
 }
 
 .company{
@@ -68,6 +85,15 @@ nav{
     color: var(--logo-clr);
 
 }
+
+.nav-item.hidden{
+    transform: translateY(0);
+    transform: translateX(-100%);
+}
+
+.nav-item.show{
+    transform: translateX(0);
+}
 .cross{
     display: none;
 }
@@ -83,6 +109,7 @@ nav{
 .navigation li{
     position: relative;
     cursor: pointer;
+    overflow: visible;
 }
 
 .dropdown{
@@ -211,6 +238,10 @@ footer .heading{
     
 }
 @media only screen and (max-width: 950px){
+
+    .nav-item.show{
+        transition-duration: 1s ;
+    }
     
     .hamburger{
         display: block;
@@ -225,16 +256,15 @@ footer .heading{
         font-size: 0.7rem;
     }
 
-    nav .navigation{
+    .navigation{
         z-index: 500000;
-        display: none;
-       /*  height: 100vh; */
+        /* display: none; */
         position: fixed;
         top: 0;
-        right: 0;
+        right: 100vw;
         align-items: flex-start;
         flex-direction: column;
-        width: 70vw;
+        width: 60vw;
         
         background-color: rgba(22, 24, 25, 0.97);
         backdrop-filter: blur(10px);
@@ -242,10 +272,12 @@ footer .heading{
         padding-top: 2rem;
         padding-bottom: 4rem;
         font-size: 1rem;
+        transition: 1s;
     }
 
     .navigation.active{
         display: flex;
+        right: 40vw;
     }
 
     .dropdown{
@@ -264,13 +296,10 @@ footer .heading{
 
     .cross{
         display: block;
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
     }
 
     .navigation .home{
-        padding-top: 3rem;
+        padding-top: 1rem;
     }
 
     .navigation li a{

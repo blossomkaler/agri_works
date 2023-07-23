@@ -1,6 +1,7 @@
 const hamburger = document.querySelector('.hamburger');
 const navigation = document.querySelector('.navigation');
 const cross = document.querySelector('.cross');
+const navItems = [...document.querySelectorAll('.nav-item')] ;
 
 hamburger.addEventListener('click',() =>{
     navigation.classList.add('active');
@@ -11,6 +12,12 @@ cross.addEventListener('click',() =>{
     navigation.classList.remove('active');
     hamburger.classList.remove('active');
 })
+
+navItems.forEach(item => item.addEventListener('click',() =>{
+  navigation.classList.remove('active');
+  hamburger.classList.remove('active');
+
+}));
 
 /*`````````````````STICKY NAVBAR```````````````````````*/
 const nav = document.querySelector('nav');
@@ -27,3 +34,19 @@ function fixNav() {
 }
 
 window.addEventListener('scroll', fixNav);
+
+
+/*````````````````````````````````````````````````````````````````````````````*/
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach( entry =>{
+    if (entry.isIntersecting){
+      entry.target.classList.add('show');
+    }else{
+      entry.target.classList.remove('show');
+    }
+  });
+});
+
+const hiddenElements = [...document.querySelectorAll('.hidden')] ;
+hiddenElements.forEach(el => observer.observe(el));
